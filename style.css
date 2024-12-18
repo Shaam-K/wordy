@@ -1,0 +1,246 @@
+body {
+    background-color: #121213;
+    color:rgb(253, 253, 253)
+}
+
+.main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Montserrat", sans-serif;
+}
+
+.style_game {
+    display: grid;
+    place-items: center;
+}
+
+.heading {
+    display: grid;
+    place-items: center;
+    font-size: 1.5em;
+}
+
+.instructions {
+    display: grid;
+    place-content: center;
+    font-size: 1.35em;
+}
+
+.inst_list {
+    display: grid;
+    gap:30px;
+    margin-bottom: 3rem;
+}
+
+.inst_row {
+    display: flex;
+    gap:15px;
+    align-items: center;
+}
+
+.box {
+    width: 30px;
+    height: 30px;
+}
+
+.grey_box {
+    background-color: #3A3A3C;
+}
+
+.yellow_box {
+    background-color: #C9B458;
+}
+
+.green_box {
+    background-color: #6AAA64;
+}
+
+.start_button {
+    margin: auto;
+    width: 50%;
+    background-color: #3d3d3d;
+    color:rgb(253, 253, 253);
+    height: 65px;
+    font-weight: 700;
+    font-size: 1.30em;
+    border-radius: 30px;
+    transition: ease-in 0.1s;
+    border: none;
+}
+
+.start_button:hover {
+    cursor: pointer;
+}
+
+.start_button:active {
+    background-color: #222222;
+    color:rgb(253, 253, 253);
+    cursor: pointer;
+}
+
+.style_board {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    font-size: 1.7em;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.style_key_board {
+    display: grid;
+    place-items: center;
+    gap:20px;
+    margin: 2rem;
+}
+
+.key_box {
+    padding: 15px;
+    background-color: #636363;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.key_box:active {
+    background-color: #333333;
+}
+
+.row_1 {
+    display: flex;
+    justify-items: center;
+    gap: 5px;
+}
+
+.row_2 {
+    display: flex;
+    justify-items: center;
+    gap: 5px;
+}
+
+.row_3 {
+    display: flex;
+    justify-items: center;
+    gap: 5px;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+ #toast {
+    display: none;
+    min-width: 250px;
+    background-color: #e7e7e7;
+    color: #333333;
+    margin-left: -125px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 2px; 
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 30px;
+  }
+  
+  #toast.show {
+    display: block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+
+  
+  @keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  } 
+
+#end_screen {
+    display: grid;
+    place-items: center;
+}
+
+#end_screen.hide {
+    display: none;
+}
+
+#end_screen button {
+    margin: auto;
+    width: 50%;
+    background-color: #3d3d3d;
+    color:rgb(253, 253, 253);
+    height: 65px;
+    font-weight: 700;
+    font-size: 1.30em;
+    border-radius: 30px;
+    transition: ease-in 0.1s;
+    border: none;
+}
+
+#end_screen button:hover {
+    cursor: pointer;
+
+}
+
+#end_screen button:active {
+    background-color: #222222;
+    color:rgb(253, 253, 253);
+}
+
+@media only screen and (max-width: 900px) {
+    .style_screen {
+        margin: 0px 5px;
+    }
+
+    .heading {
+        font-size: 1.2em;
+        justify-content: left;
+        place-items:inherit;
+    }
+
+    .instructions {
+        font-size: 1.2em;
+        margin: 10px;
+    }
+    .style_board {
+        display: grid;
+        grid-template-columns: 75px 75px 75px 75px 75px;
+    }
+    .cell {
+        width: 60px;
+        height: 60px;
+    }
+
+    .style_key_board {
+        margin-top: 5rem;
+        gap:25px;
+    }
+
+    .key_box {
+        padding: 10px;
+    }
+
+    .start_button {
+        width: 100%;
+        height: 7vh;
+    }
+    
+}

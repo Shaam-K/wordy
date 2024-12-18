@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Wordy</title>
+</head>
+<body>
+    <div class="main">
+        <div id="toast"></div>
+        <div id="start_screen" class="style_screen">
+            <div class="heading">
+                <h1>Wordy</h1>  
+                <h3>Get 6 chances to guess a 5-letter word.
+                </h3>
+            </div>
+            <div class="instructions">
+                <h3>Instructions</h3>
+                <ul class="inst_list">
+                    <li>5 Boxes will be placed</li>
+                    <li>For every guess, a particular color will be assigned for each box:</li>
+                    <li class="inst_row"><div class="box grey_box"></div>- the letter is not present in the word.</li>
+                    <li class="inst_row"><div class="box yellow_box"></div>- the letter is present in the word, but placed incorrectly.</li>
+                    <li class="inst_row"><div class="box green_box"></div>- the letter is present in the word, and is placed correctly.</li>
+                </ul>
+                    <button class="start_button" id="game_start">Play</button>
+            </div>
+        </div>
+        <div id="gameplay_screen" class="hide style_game">
+            <div id="board" class="style_board">
+            </div>
+
+            <div id="key_board" class="style_key_board">
+                <div class="row_1">
+                    <div class="key_box" id="key_0" data-ind="0" data-ch="Q">Q</div>
+                    <div class="key_box" id="key_1" data-ind="1" data-ch="W">W</div>
+                    <div class="key_box" id="key_2" data-ind="2" data-ch="E">E</div>
+                    <div class="key_box" id="key_4" data-ind="3" data-ch="R">R</div>
+                    <div class="key_box" id="key_4" data-ind="4" data-ch="T">T</div>
+                    <div class="key_box" id="key_5" data-ind="5" data-ch="Y">Y</div>
+                    <div class="key_box" id="key_6" data-ind="6" data-ch="U">U</div>
+                    <div class="key_box" id="key_7" data-ind="7" data-ch="I">I</div>
+                    <div class="key_box" id="key_8" data-ind="8" data-ch="O">O</div>
+                    <div class="key_box" id="key_9" data-ind="9" data-ch="P">P</div>
+                </div>
+                <div class="row_2">
+                    <div class="key_box" id="key_10" data-ind="10" data-ch="A">A</div>
+                    <div class="key_box" id="key_11" data-ind="11" data-ch="S">S</div>
+                    <div class="key_box" id="key_12" data-ind="12" data-ch="D">D</div>
+                    <div class="key_box" id="key_13" data-ind="13" data-ch="F">F</div>
+                    <div class="key_box" id="key_14" data-ind="14" data-ch="G">G</div>
+                    <div class="key_box" id="key_15" data-ind="15" data-ch="H">H</div>
+                    <div class="key_box" id="key_16" data-ind="16" data-ch="J">J</div>
+                    <div class="key_box" id="key_17" data-ind="17" data-ch="K">K</div>
+                    <div class="key_box" id="key_18" data-ind="18" data-ch="L">L</div>
+                </div>
+                <div class="row_3">
+                    <div class="key_box" id="key_19" data-ind="19" data-ch="ENT">ENTER</div>
+                    <div class="key_box" id="key_20" data-ind="20" data-ch="Z">Z</div>
+                    <div class="key_box" id="key_21" data-ind="21" data-ch="X">X</div>
+                    <div class="key_box" id="key_22" data-ind="22" data-ch="C">C</div>
+                    <div class="key_box" id="key_23" data-ind="23" data-ch="V">V</div>
+                    <div class="key_box" id="key_24" data-ind="24" data-ch="B">B</div>
+                    <div class="key_box" id="key_25" data-ind="25" data-ch="N">N</div>
+                    <div class="key_box" id="key_26" data-ind="26" data-ch="M">M</div>
+                    <div class="key_box" id="key_27" data-ind="27" data-ch="DEL">DEL</div>
+                </div>
+            </div>
+        </div>
+        <div id="end_screen" class="hide style_end_screen">
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
